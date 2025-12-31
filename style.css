@@ -1,0 +1,150 @@
+/* ================================
+   GLOBAL RESET & BASE
+================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', Arial, sans-serif;
+    background-color: #000;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+/* ================================
+   HERO SECTION (BIG FACE BACKGROUND)
+================================ */
+.hero {
+    background-image: url('image/myface.jpg.jpg'); /* 👈 CHANGE ONLY FILE NAME IF NEEDED */
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    min-height: 100vh;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    position: relative;
+}
+
+/* Dark overlay for text clarity */
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.65);
+    z-index: 1;
+}
+
+/* Hero content */
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+    padding: 2rem;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+/* CTA Button */
+.btn {
+    display: inline-block;
+    padding: 14px 32px;
+    background: #ffffff;
+    color: #000000;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background: #dddddd;
+    transform: translateY(-2px);
+}
+
+/* ================================
+   SECTIONS (GLOBAL)
+================================ */
+section {
+    padding: 5rem 10%;
+    background-color: #000;
+}
+
+section h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1.2rem;
+}
+
+section p {
+    font-size: 1.05rem;
+    margin-bottom: 1.2rem;
+    opacity: 0.9;
+}
+
+ul {
+    margin-top: 1rem;
+    padding-left: 1.5rem;
+}
+
+ul li {
+    margin-bottom: 0.7rem;
+}
+
+/* ================================
+   AUTHOR SECTION
+================================ */
+.author {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* ================================
+   FOOTER
+================================ */
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
+
+/* ================================
+   MOBILE RESPONSIVENESS
+================================ */
+@media (max-width: 768px) {
+    .hero {
+        min-height: 100svh;
+        background-position: center top;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    section {
+        padding: 3.5rem 7%;
+    }
+}
